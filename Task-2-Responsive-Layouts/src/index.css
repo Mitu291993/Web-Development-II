@@ -1,0 +1,101 @@
+
+/*
+  TASK 2: watch.it Movie Website
+
+  GLOBAL CSS STYLES
+
+  This file controls the basic styling
+  shared across the whole React website.
+*/
+
+/* =========================================
+   1. GLOBAL BOX SIZING
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Teko:wght@400;500;600&display=swap');
+
+/*
+  Include padding and borders inside the
+  total width and height of every element.
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   2. HTML SETTINGS
+========================================= */
+
+/* Smooth scrolling when navigation is clicked */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   3. BODY STYLING
+========================================= */
+
+/*
+  Remove default browser margins.
+
+  Use the light-grey background shown in
+  the university's watch.it wireframes.
+*/
+body {
+  margin: 0;
+  min-width: 280px;
+
+  /* Updated background colour */
+  background-color: #D3D3D3;
+
+  /* Dark text from the university palette */
+  color: #070410;
+
+  /* Clean, readable font */
+  font-family: 'Lato', sans-serif;
+}
+
+/* =========================================
+   4. REACT ROOT CONTAINER
+========================================= */
+
+/* Make the React application fill the page */
+#root {
+  min-height: 100vh;
+}
+
+/* =========================================
+   5. IMAGE SETTINGS
+========================================= */
+
+/*
+  Prevent movie posters from overflowing
+  their containers.
+*/
+img {
+  max-width: 100%;
+}
+
+/* =========================================
+   6. BUTTON SETTINGS
+========================================= */
+
+/* University specification: Teko headings and buttons */
+h1, h2, h3, h4, h5, h6, button {
+  font-family: 'Teko', sans-serif;
+}
+
+/* =========================================
+   7. ACCESSIBILITY
+========================================= */
+
+/*
+  Respect users who prefer reduced motion.
+  This disables smooth scrolling for them.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
