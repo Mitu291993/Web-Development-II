@@ -1,0 +1,66 @@
+
+/*
+  ERased Tapes - Global Styles
+  ---------------------------
+  This file controls styles shared by the whole website.
+*/
+
+/* Import the two fonts required by the assignment */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Protest+Guerrilla&display=swap');
+
+/* Include padding and borders in element dimensions */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main page settings */
+body {
+  margin: 0;
+  padding: 0;
+
+  /* Required page background */
+  background-color: #e9e9e9;
+
+  color: #14181d;
+
+  /* Required body font */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Required heading font */
+h1,
+h2,
+h3 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-weight: 400;
+}
+
+/* Remove unexpected default heading margins */
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+/* Ensure React fills the available page height */
+#root {
+  min-height: 100vh;
+}
+
+/* Keep images inside their containers */
+img {
+  max-width: 100%;
+}
+
+/* Basic link styling */
+a {
+  color: inherit;
+}

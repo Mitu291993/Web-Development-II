@@ -1,0 +1,565 @@
+
+/*
+  TASK 1: ERASED TAPES - COMPLETE APP.CSS
+  --------------------------------
+  Layout based on the desktop wireframe.
+
+  Requirements:
+  - White content background
+  - Grey page background
+  - Dark footer
+  - 200px logo and author photograph
+  - 50px social media icons
+  - 10px spacing between icons
+  - Protest Guerrilla headings
+  - Josefin Sans body text
+  - Responsive layout
+*/
+/*AI ASSISTANCE ACKNOWLEDGEMENT
+Tool: ChatGPT (OpenAI)
+Prompt: I asked ChatGPT to help me fix the missing third social media icon on my React website.
+How AI was used: ChatGPT helped me identify the issue and provided a CSS fix to make the original icon visible. 
+I completed the rest of the code myself.
+
+
+/* =====================================
+   1. HEADER AND NAVIGATION
+===================================== */
+
+/* Header centred on the page */
+.site-header {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* Logo centred above navigation */
+.site-logo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 50px;
+  object-fit: contain;
+}
+
+/* Navigation links displayed horizontally */
+.site-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+/* Navigation link appearance */
+.site-navigation a {
+  color: #14181d;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Underline navigation links on hover */
+.site-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   2. MAIN CONTENT CONTAINER
+===================================== */
+
+/* White article area centred on grey page */
+.page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* =====================================
+   3. INTRODUCTION
+===================================== */
+
+/* Spacing around the title and introduction */
+.introduction {
+  padding: 50px 50px 25px;
+}
+
+/* Large main article title */
+.introduction h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: clamp(64px, 7vw, 100px);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 0 0 10px;
+}
+
+/* Subtitle */
+.introduction h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 30px;
+}
+
+/* Larger introductory paragraph */
+.introduction p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 750px;
+  margin: 0;
+}
+
+/* =====================================
+   4. ARTICLE CONTENT
+===================================== */
+
+/* Spacing around the three text columns */
+.article-content {
+  padding: 0 50px 50px;
+}
+
+/*
+  Desktop article layout.
+
+  Text automatically flows into
+  three balanced columns.
+*/
+.article-flow {
+  column-count: 3;
+  column-gap: 30px;
+  column-fill: balance;
+}
+
+/* Article section headings */
+.article-flow h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 20px;
+  break-after: avoid;
+}
+
+/* Article paragraphs */
+.article-flow p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+/* =====================================
+   5. ALBUM GALLERY
+===================================== */
+
+/*
+  The gallery contains five images.
+
+  One large album occupies the left half.
+  Four smaller albums occupy the right half.
+*/
+.album-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+}
+
+/* All album covers fill their grid cells */
+.album-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Featured album occupies 2 columns and 2 rows */
+.album-featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* =====================================
+   6. AUTHOR SECTION
+===================================== */
+
+/*
+  Desktop author layout:
+  Biography | Photograph | Social icons
+*/
+.author-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+/* Author biography container */
+.author-text {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+/* Author heading */
+.author-text h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+/* Author biography paragraph */
+.author-text p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Circular author photograph */
+.author-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/*
+  Social icons stacked vertically
+  next to the photograph.
+*/
+.author-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Required icon dimensions */
+.author-social img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* =====================================
+   7. COMMENTS SECTION
+===================================== */
+
+/* Light grey comments background */
+.comments-section {
+  background-color: #e9e9e9;
+  padding: 50px;
+}
+
+/* Comments heading */
+.comments-section h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 30px;
+}
+
+/* Spacing between comments */
+.comment {
+  margin-bottom: 30px;
+}
+
+/* Remove extra spacing after final comment */
+.comment:last-child {
+  margin-bottom: 0;
+}
+
+/* Comment username */
+.comment h3 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+/* Comment paragraph */
+.comment p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0;
+}
+
+/* =====================================
+   8. FOOTER
+===================================== */
+
+/* Full-width dark footer */
+.site-footer {
+  width: 100%;
+  background-color: #14181d;
+  color: #ffffff;
+  padding: 50px 24px;
+  text-align: center;
+}
+
+/* Footer navigation */
+.site-footer .site-navigation {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+/* White footer navigation links */
+.site-footer .site-navigation a {
+  color: #ffffff;
+}
+
+/* Copyright text */
+.site-footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  margin: 0 0 30px;
+}
+
+/* Social icons displayed horizontally */
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Footer social icon dimensions */
+.footer-social img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* =====================================
+   9. TABLET LAYOUT
+   Screens up to 800px
+===================================== */
+
+@media (max-width: 800px) {
+
+  /* Reduce header spacing */
+  .site-header {
+    padding: 30px 20px;
+  }
+
+  .site-logo {
+    margin-bottom: 30px;
+  }
+
+  .site-navigation {
+    gap: 20px;
+  }
+
+  /* Reduce article side padding */
+  .introduction {
+    padding: 35px 30px 20px;
+  }
+
+  .introduction h1 {
+    font-size: 65px;
+  }
+
+  .introduction h2 {
+    font-size: 40px;
+  }
+
+  .article-content {
+    padding: 0 30px 35px;
+  }
+
+  /* Two columns on tablets */
+  .article-flow {
+    column-count: 2;
+    column-gap: 25px;
+  }
+
+  /* Keep author layout compact */
+  .author-section {
+    gap: 20px;
+    padding: 35px 25px;
+  }
+
+  /* Comments spacing */
+  .comments-section {
+    padding: 35px 30px;
+  }
+}
+
+/* =====================================
+   10. MOBILE LAYOUT
+   Screens up to 550px
+===================================== */
+
+@media (max-width: 550px) {
+
+  /* Header */
+  .site-header {
+    padding: 25px 15px;
+  }
+
+  .site-logo {
+    margin-bottom: 25px;
+  }
+
+  /* Navigation */
+  .site-navigation {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .site-navigation a {
+    font-size: 13px;
+  }
+
+  /* Introduction */
+  .introduction {
+    padding: 25px 20px 20px;
+  }
+
+  .introduction h1 {
+    font-size: 50px;
+  }
+
+  .introduction h2 {
+    font-size: 32px;
+  }
+
+  .introduction p {
+    font-size: 18px;
+  }
+
+  /* Article */
+  .article-content {
+    padding: 0 20px 30px;
+  }
+
+  /* Single column on mobile */
+  .article-flow {
+    column-count: 1;
+  }
+
+  .article-flow h2 {
+    font-size: 48px;
+  }
+
+  /*
+    Mobile album gallery:
+    Featured album on top.
+    Four smaller images below.
+  */
+  .album-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .album-featured {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  /* =================================
+     MOBILE AUTHOR SECTION
+  ================================= */
+
+  /*
+    Stack author biography, photograph
+    and social icons vertically.
+  */
+  .author-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  /* Biography fills available width */
+  .author-text {
+    width: 100%;
+    flex: none;
+    text-align: center;
+  }
+
+  .author-text h2 {
+    font-size: 48px;
+  }
+
+  /* Keep photograph at required width */
+  .author-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  /*
+    Show all three social icons
+    horizontally on mobile.
+  */
+  .author-social {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .author-social img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* =================================
+     MOBILE COMMENTS
+  ================================= */
+
+  .comments-section {
+    padding: 30px 20px;
+  }
+
+  .comments-section h2 {
+    font-size: 48px;
+  }
+
+  /* =================================
+     MOBILE FOOTER
+  ================================= */
+
+  .site-footer {
+    padding: 35px 20px;
+  }
+
+  .site-footer .site-navigation {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+/* FIX: Make the third social media icon visible */
+.author-social {
+  overflow: visible;
+}
+
+/* Twitter/X icon styling */
+.author-social img:nth-child(3) {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #14181d;
+  padding: 8px;
+  border-radius: 50%;
+}
